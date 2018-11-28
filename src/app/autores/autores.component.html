@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        <h1 class="display-4">Autores</h1>
+        <button class="btn btn-primary" (click)="crearUsuario();">Ver</button>
+      </div>
+      <div class="card-text">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Opciones</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let autor of autores'>
+                <td>{{autor.FirstName}}</td>
+                <td>{{autor.LastName}}</td>
+                <td><button class="btn btn-primary" >Ver Libros</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
