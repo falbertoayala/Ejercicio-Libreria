@@ -14,4 +14,7 @@ export class UsuarioService {
    getAutores(){
      return this.http.get("https://fakerestapi.azurewebsites.net/api/Authors")
    }
+   getDetalleAutor(id){
+     return this.http.get("https://fakerestapi.azurewebsites.net/api/Authors/"+ id)
+   }
 }
