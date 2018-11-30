@@ -23,9 +23,13 @@ export class DetalleAutorComponent implements OnInit {
     this.route.paramMap
     .subscribe(parameters =>{
       let id = Number(parameters.get("id"));
-      // this.getDetalleAutor(id);
-    })
+      this.getDetalleAutor(id);
+    });
     
+  }
+  getDetalleAutor(id: number){
+    this.usuarioService.getDetalleAutor(id)
+    .subscribe((data : Autores)=> this.autores = data);
   }
 
 }
